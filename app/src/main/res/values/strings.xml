@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AccessBridge</string>
+    <string name="health">Health</string>
+    <string name="legal">Legal Rights</string>
+    <string name="transport">Transport</string>
+    <string name="education">Education</string>
+    <string name="health_desc">Find nearby health facilities</string>
+    <string name="legal_desc">Learn your basic rights</string>
+    <string name="transport_desc">Bus and metro information</string>
+    <string name="education_desc">Education support resources</string>
+    <string name="loading">Loading...</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="back">Back</string>
+    <string name="read_more">Read More</string>
+    <string name="call">Call</string>
+    <string name="directions">Get Directions</string>
+    <string name="open_website">Open Website</string>
+    <string name="error">Something went wrong</string>
+    <string name="retry">Retry</string>
+</resources>
