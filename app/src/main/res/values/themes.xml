@@ -6,9 +6,36 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/purple_700</item>
+
+        <item name="healthCardBg">@color/color_health</item>
+        <item name="legalCardBg">@color/color_legal</item>
+        <item name="transportCardBg">@color/color_transport</item>
+        <item name="educationCardBg">@color/color_education</item>
+        <item name="cardContentText">@color/white</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AccessBridge">
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.HighContrast" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/hc_text</item>
+        <item name="colorSecondary">@color/hc_text</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/hc_background</item>
+        <item name="colorSurface">@color/hc_card_bg</item>
+        <item name="colorOnSurface">@color/hc_text</item>
+        <item name="android:textColorPrimary">@color/hc_text</item>
+        <item name="android:textColorSecondary">@color/hc_text</item>
+        <item name="android:textColor">@color/hc_text</item>
+
+        <item name="healthCardBg">@color/hc_card_bg</item>
+        <item name="legalCardBg">@color/hc_card_bg</item>
+        <item name="transportCardBg">@color/hc_card_bg</item>
+        <item name="educationCardBg">@color/hc_card_bg</item>
+        <item name="cardContentText">@color/hc_text</item>
     </style>
 </resources>

@@ -31,7 +31,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 
-public class HealthActivity extends AppCompatActivity {
+public class HealthActivity extends BaseActivity {
 
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;

@@ -16,6 +16,8 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
     private Context context;
     private List<InfoItem> itemList;
     private OnItemClickListener listener;
+    private com.example.accessbridgeproject.utils.TTSManager ttsManager;
+    private com.example.accessbridgeproject.utils.SettingsManager settings;
 
     public interface OnItemClickListener {
         void onItemClick(InfoItem item);
@@ -25,6 +27,8 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
         this.context = context;
         this.itemList = itemList;
         this.listener = listener;
+        this.ttsManager = new com.example.accessbridgeproject.utils.TTSManager(context);
+        this.settings = new com.example.accessbridgeproject.utils.SettingsManager(context);
     }
 
     @NonNull
@@ -42,6 +46,13 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
 
         holder.itemView.setOnClickListener(v -> {
             listener.onItemClick(item);
+        });
+
+        holder.itemView.setOnLongClickListener(v -> {
+            if (settings.isVoiceReaderEnabled()) {
+                ttsManager.speak(item.getTitle() + ". " + item.getDescription());
+            }
+            return true;
         });
     }
 

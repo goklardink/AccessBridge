@@ -2,49 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background_light"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        android:background="?attr/legalCardBg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/color_legal"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="16dp">
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="←"
+            android:textColor="?attr/cardContentText"
+            android:textSize="24sp"
+            android:contentDescription="@string/back"/>
 
-            <TextView
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="←"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/legal"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewLegal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:padding="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/legal"
+            android:textColor="?attr/cardContentText"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLegal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="16dp" />
+
 </LinearLayout>

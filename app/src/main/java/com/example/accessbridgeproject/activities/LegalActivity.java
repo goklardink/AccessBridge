@@ -15,7 +15,7 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import com.example.accessbridgeproject.utils.NetworkReceiver;
 
-public class LegalActivity extends AppCompatActivity {
+public class LegalActivity extends BaseActivity {
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;
     RecyclerView recyclerView;
@@ -62,34 +62,37 @@ public class LegalActivity extends AppCompatActivity {
         unregisterReceiver(networkReceiver);
     }
     private void loadLegalRights() {
+        com.example.accessbridgeproject.utils.SettingsManager settings = new com.example.accessbridgeproject.utils.SettingsManager(this);
+        boolean isSimple = settings.isSimpleLanguage();
+
         itemList.add(new InfoItem(
-                "Right to Health",
-                "Everyone has the right to access healthcare services. You can receive free emergency care at public hospitals regardless of your status.",
+                getString(R.string.right_equality_title),
+                isSimple ? getString(R.string.right_equality_desc_simple) : getString(R.string.right_equality_desc),
                 "legal"
         ));
         itemList.add(new InfoItem(
-                "Right to Education",
-                "Every child has the right to free and compulsory education. No child can be denied access to education.",
+                getString(R.string.right_disability_title),
+                isSimple ? getString(R.string.right_disability_desc_simple) : getString(R.string.right_disability_desc),
                 "legal"
         ));
         itemList.add(new InfoItem(
-                "Right to Housing",
-                "Everyone has the right to adequate housing. You can apply for social housing if you are in need.",
+                getString(R.string.right_health_title),
+                isSimple ? getString(R.string.right_health_desc_simple) : getString(R.string.right_health_desc),
                 "legal"
         ));
         itemList.add(new InfoItem(
-                "Right to Legal Aid",
-                "If you cannot afford a lawyer, you have the right to free legal assistance through legal aid services.",
+                getString(R.string.right_privacy_title),
+                isSimple ? getString(R.string.right_privacy_desc_simple) : getString(R.string.right_privacy_desc),
                 "legal"
         ));
         itemList.add(new InfoItem(
-                "Right to Work",
-                "Every person has the right to work and fair wages. Discrimination in the workplace is prohibited by law.",
+                getString(R.string.right_work_title),
+                isSimple ? getString(R.string.right_work_desc_simple) : getString(R.string.right_work_desc),
                 "legal"
         ));
         itemList.add(new InfoItem(
-                "Right to Social Support",
-                "If you are in financial difficulty, you can apply for social assistance from local municipalities.",
+                getString(R.string.right_vote_title),
+                isSimple ? getString(R.string.right_vote_desc_simple) : getString(R.string.right_vote_desc),
                 "legal"
         ));
     }

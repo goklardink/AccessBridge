@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TransportActivity extends AppCompatActivity {
+public class TransportActivity extends BaseActivity {
 
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;

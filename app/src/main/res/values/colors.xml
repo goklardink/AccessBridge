@@ -15,4 +15,8 @@
     <color name="card_background">#FFFFFF</color>
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
+    
+    <color name="hc_background">#000000</color>
+    <color name="hc_text">#FFFF00</color>
+    <color name="hc_card_bg">#333333</color>
 </resources>

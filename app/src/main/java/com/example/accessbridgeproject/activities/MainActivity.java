@@ -16,12 +16,13 @@ import androidx.core.app.NotificationCompat;
 import com.example.accessbridgeproject.R;
 import com.example.accessbridgeproject.utils.NetworkReceiver;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     CardView cardHealth, cardLegal, cardTransport, cardEducation;
     private static final String CHANNEL_ID = "accessbridge_channel";
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;
+    private com.example.accessbridgeproject.utils.TTSManager ttsManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         cardLegal = findViewById(R.id.cardLegal);
         cardTransport = findViewById(R.id.cardTransport);
         cardEducation = findViewById(R.id.cardEducation);
+        android.widget.ImageView btnSettings = findViewById(R.id.btnSettings);
+
+        btnSettings.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SettingsActivity.class)));
 
         cardHealth.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, HealthActivity.class);
@@ -59,6 +63,37 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        com.example.accessbridgeproject.utils.SettingsManager settings = new com.example.accessbridgeproject.utils.SettingsManager(this);
+        ttsManager = new com.example.accessbridgeproject.utils.TTSManager(this);
+
+        cardHealth.setOnLongClickListener(v -> {
+            if (settings.isVoiceReaderEnabled()) {
+                ttsManager.speak(getString(R.string.health) + ". " + getString(R.string.health_desc));
+            }
+            return true;
+        });
+
+        cardLegal.setOnLongClickListener(v -> {
+            if (settings.isVoiceReaderEnabled()) {
+                ttsManager.speak(getString(R.string.legal) + ". " + getString(R.string.legal_desc));
+            }
+            return true;
+        });
+
+        cardTransport.setOnLongClickListener(v -> {
+            if (settings.isVoiceReaderEnabled()) {
+                ttsManager.speak(getString(R.string.transport) + ". " + getString(R.string.transport_desc));
+            }
+            return true;
+        });
+
+        cardEducation.setOnLongClickListener(v -> {
+            if (settings.isVoiceReaderEnabled()) {
+                ttsManager.speak(getString(R.string.education) + ". " + getString(R.string.education_desc));
+            }
+            return true;
+        });
+
         networkReceiver = new NetworkReceiver();
         intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
     }
@@ -73,6 +108,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         unregisterReceiver(networkReceiver);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (ttsManager != null) {
+            ttsManager.shutdown();
+        }
     }
 
     private void createNotificationChannel() {

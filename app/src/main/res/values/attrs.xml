@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="healthCardBg" format="color|reference" />
+    <attr name="legalCardBg" format="color|reference" />
+    <attr name="transportCardBg" format="color|reference" />
+    <attr name="educationCardBg" format="color|reference" />
+    <attr name="cardContentText" format="color|reference" />
+</resources>

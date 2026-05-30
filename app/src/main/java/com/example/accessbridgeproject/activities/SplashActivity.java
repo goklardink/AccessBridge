@@ -10,7 +10,7 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import com.example.accessbridgeproject.utils.NetworkReceiver;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;
     @Override

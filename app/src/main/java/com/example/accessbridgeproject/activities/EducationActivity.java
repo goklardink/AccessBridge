@@ -15,7 +15,7 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import com.example.accessbridgeproject.utils.NetworkReceiver;
 
-public class EducationActivity extends AppCompatActivity {
+public class EducationActivity extends BaseActivity {
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;
     RecyclerView recyclerView;

@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_light">
+    android:background="?android:attr/windowBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="@color/color_health"
+        android:background="?attr/healthCardBg"
         android:gravity="center_vertical"
         android:padding="16dp">
 
@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="@color/white"
+            android:contentDescription="@string/back"
+            android:textColor="?attr/cardContentText"
             android:textSize="24sp"
             android:clickable="true"
             android:focusable="true"/>
@@ -27,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/health"
-            android:textColor="@color/white"
+            android:textColor="?attr/cardContentText"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginStart="16dp"/>
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:background="@color/white">
+        android:background="?android:attr/windowBackground">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/etSearch"
@@ -58,8 +59,8 @@
             android:layout_height="48dp"
             android:text="Search"
             android:layout_marginStart="8dp"
-            android:background="@color/color_health"
-            android:textColor="@color/white"/>
+            android:background="?attr/healthCardBg"
+            android:textColor="?attr/cardContentText"/>
 
     </LinearLayout>
 
@@ -67,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/white"
+        android:background="?android:attr/windowBackground"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:paddingBottom="8dp">
@@ -79,8 +80,8 @@
             android:layout_weight="1"
             android:text="Hospitals"
             android:textSize="14sp"
-            android:background="@color/color_health"
-            android:textColor="@color/white"
+            android:background="?attr/healthCardBg"
+            android:textColor="?attr/cardContentText"
             android:layout_marginEnd="8dp"/>
 
         <Button
@@ -90,8 +91,8 @@
             android:layout_weight="1"
             android:text="Pharmacies"
             android:textSize="14sp"
-            android:background="@color/background_light"
-            android:textColor="@color/text_primary"/>
+            android:background="?android:attr/windowBackground"
+            android:textColor="?android:attr/textColorPrimary"/>
 
     </LinearLayout>
 

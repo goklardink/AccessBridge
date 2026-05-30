@@ -7,16 +7,22 @@ import com.example.accessbridgeproject.R;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import com.example.accessbridgeproject.utils.NetworkReceiver;
+import android.content.Intent;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends BaseActivity {
     private NetworkReceiver networkReceiver;
     private IntentFilter intentFilter;
     TextView tvTitle, tvDescription, tvToolbarTitle, btnBack;
+
+    private com.example.accessbridgeproject.utils.TTSManager ttsManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        ttsManager = new com.example.accessbridgeproject.utils.TTSManager(this);
+        com.example.accessbridgeproject.utils.SettingsManager settings = new com.example.accessbridgeproject.utils.SettingsManager(this);
 
         tvTitle = findViewById(R.id.tvTitle);
         tvDescription = findViewById(R.id.tvDescription);
@@ -25,13 +31,24 @@ public class DetailActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(v -> finish());
 
-        String title = getIntent().getStringExtra("title");
-        String description = getIntent().getStringExtra("description");
-        String category = getIntent().getStringExtra("category");
+        Intent intent = getIntent();
+        if (intent != null) {
+            String title = intent.getStringExtra("title");
+            String description = intent.getStringExtra("description");
+            String category = intent.getStringExtra("category");
 
-        tvTitle.setText(title);
-        tvDescription.setText(description);
-        tvToolbarTitle.setText(category);
+            tvTitle.setText(title);
+            tvDescription.setText(description);
+            tvToolbarTitle.setText(title);
+
+            if (settings.isVoiceReaderEnabled()) {
+                // Read out loud with slight delay to ensure TTS engine is loaded
+                tvTitle.postDelayed(() -> {
+                    ttsManager.speak(title + ". " + description);
+                }, 1000);
+            }
+        }
+        
         networkReceiver = new NetworkReceiver();
         intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
     }

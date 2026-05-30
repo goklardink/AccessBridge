@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ErişimKöprüsü</string>
+    <string name="health">Sağlık</string>
+    <string name="legal">Haklarım</string>
+    <string name="transport">Ulaşım</string>
+    <string name="education">Eğitim</string>
+    <string name="health_desc">Yakındaki sağlık tesislerini bulun</string>
+    <string name="legal_desc">Temel haklarınızı öğrenin</string>
+    <string name="transport_desc">Otobüs ve metro bilgileri</string>
+    <string name="education_desc">Eğitim destek kaynakları</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="no_internet">İnternet bağlantısı yok</string>
+    <string name="back">Geri</string>
+    <string name="read_more">Daha Fazla Oku</string>
+    <string name="call">Ara</string>
+    <string name="directions">Yol Tarifi Al</string>
+    <string name="open_website">Web Sitesini Aç</string>
+    <string name="error">Bir şeyler yanlış gitti</string>
+    <string name="retry">Tekrar Dene</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="font_size">Yazı Boyutu</string>
+    <string name="font_size_normal">Normal</string>
+    <string name="font_size_large">Büyük</string>
+    <string name="font_size_huge">Çok Büyük</string>
+    <string name="high_contrast">Yüksek Kontrast Modu</string>
+    <string name="simple_language">Basit Dil Modu</string>
+
+    <string name="right_equality_title">Eşitlik İlkesi (Anayasa Madde 10)</string>
+    <string name="right_equality_desc">Herkes, dil, ırk, renk, cinsiyet, siyasî düşünce, felsefî inanç, din, mezhep ve benzeri sebeplerle ayırım gözetilmeksizin kanun önünde eşittir.</string>
+    <string name="right_disability_title">Engelli Hakları (Kanun No: 5378)</string>
+    <string name="right_disability_desc">Engellilerin temel hak ve özgürlüklerden tam ve eşit olarak yararlanması esastır. Engelliliğe dayalı ayrımcılık yapılamaz.</string>
+    <string name="right_health_title">Sağlık Hakkı</string>
+    <string name="right_health_desc">Herkes sağlıklı ve dengeli bir çevrede yaşama hakkına sahiptir. Devlet, herkesin hayatını, beden ve ruh sağlığı içinde sürdürmesini sağlamakla yükümlüdür.</string>
+
+    <string name="right_equality_desc_simple">Kanunlar önünde herkes eşittir. Kimseye ayrımcılık yapılamaz.</string>
+    <string name="right_disability_desc_simple">Engelli bireylerin hakları kanunlarla korunur. Ayrımcılık yapmak yasaktır.</string>
+    <string name="right_health_desc_simple">Herkesin hastanelerden sağlık hizmeti almaya hakkı vardır.</string>
+
+    <string name="right_privacy_title">Özel Hayatın Gizliliği</string>
+    <string name="right_privacy_desc">Herkes, özel hayatına ve aile hayatına saygı gösterilmesini isteme hakkına sahiptir. Özel hayatın ve aile hayatının gizliliğine dokunulamaz.</string>
+    <string name="right_privacy_desc_simple">Özel hayatınıza saygı duyulmalıdır. Kimse izinsiz özel bilgilerinizi öğrenemez.</string>
+
+    <string name="right_work_title">Çalışma Hakkı</string>
+    <string name="right_work_desc">Çalışma, herkesin hakkı ve ödevidir. Devlet, çalışanların hayat seviyesini yükseltmek, çalışma hayatını geliştirmek için çalışanları ve işsizleri korumakla görevlidir.</string>
+    <string name="right_work_desc_simple">Herkesin çalışma hakkı vardır. Devlet, iş bulmanıza ve çalışırken haklarınızı korumaya yardımcı olur.</string>
+
+    <string name="right_vote_title">Seçme ve Seçilme Hakkı</string>
+    <string name="right_vote_desc">Vatandaşlar, kanunda gösterilen şartlara uygun olarak, seçme, seçilme ve bağımsız olarak veya bir siyasî parti içinde siyasî faaliyette bulunma ve halkoylamasına katılma hakkına sahiptir.</string>
+    <string name="right_vote_desc_simple">Yaşınız gelince oy kullanabilir veya aday olabilirsiniz. Seçimlere katılmak hakkınızdır.</string>
+
+    <string name="voice_reader">Sesli Okuyucu (Uygulama İçi TalkBack)</string>
+</resources>
