@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AccessBridge</string>
+    <string name="health">Health</string>
+    <string name="legal">Legal Rights</string>
+    <string name="transport">Transport</string>
+    <string name="education">Education</string>
+    <string name="health_desc">Find nearby health facilities</string>
+    <string name="legal_desc">Learn your basic rights</string>
+    <string name="transport_desc">Bus and metro information</string>
+    <string name="education_desc">Education support resources</string>
+    <string name="loading">Loading...</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="back">Back</string>
+    <string name="read_more">Read More</string>
+    <string name="call">Call</string>
+    <string name="directions">Get Directions</string>
+    <string name="open_website">Open Website</string>
+    <string name="error">Something went wrong</string>
+    <string name="retry">Retry</string>
+
+    <string name="settings">Settings</string>
+    <string name="font_size">Font Size</string>
+    <string name="font_size_normal">Normal</string>
+    <string name="font_size_large">Large</string>
+    <string name="font_size_huge">Huge</string>
+    <string name="high_contrast">High Contrast Mode</string>
+    <string name="simple_language">Simple Language Mode</string>
+
+    <string name="right_equality_title">Right to Equality</string>
+    <string name="right_equality_desc">Everyone is equal before the law without distinction as to language, race, color, sex, political opinion, philosophical belief, religion and sect, or any such grounds.</string>
+    <string name="right_disability_title">Disability Rights</string>
+    <string name="right_disability_desc">It is essential to take necessary measures to ensure that people with disabilities can access social, economic, and cultural life equally. Discrimination is prohibited.</string>
+    <string name="right_health_title">Right to Health</string>
+    <string name="right_health_desc">Everyone has the right to access healthcare services. You can receive free emergency care at public hospitals regardless of your status.</string>
+
+    <string name="right_equality_desc_simple">Everyone is treated equally. No one is discriminated against.</string>
+    <string name="right_disability_desc_simple">People with disabilities have the same rights to join all parts of life.</string>
+    <string name="right_health_desc_simple">Everyone can get medical help when they are sick.</string>
+
+    <string name="right_privacy_title">Right to Privacy</string>
+    <string name="right_privacy_desc">Everyone has the right to respect for his or her private and family life, his or her home and his or her correspondence.</string>
+    <string name="right_privacy_desc_simple">Your private life must be respected. No one can learn your private information without permission.</string>
+
+    <string name="right_work_title">Right to Work</string>
+    <string name="right_work_desc">Everyone has the right to work, to free choice of employment, to just and favourable conditions of work and to protection against unemployment.</string>
+    <string name="right_work_desc_simple">Everyone has the right to work. The government helps you find a job and protects your rights.</string>
+
+    <string name="right_vote_title">Right to Vote</string>
+    <string name="right_vote_desc">Every citizen has the right and the opportunity to vote and to be elected at genuine periodic elections.</string>
+    <string name="right_vote_desc_simple">When you are old enough, you can vote or be a candidate. It is your right to join elections.</string>
+    
+    <string name="voice_reader">Voice Reader (In-App TalkBack)</string>
+</resources>
