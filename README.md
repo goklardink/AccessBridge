@@ -2,7 +2,7 @@
 
 A Supportive Information App for Disadvantaged Individuals
 
-The AccessBridge is an app on Android platform that helps disadvantaged people access relevant information from one source. Disadvantaged groups of people such as the elderly, the disabled, people from low-income backgrounds, and those new to the city have difficulty accessing relevant information due to the information being spread across numerous websites and government portals.
+Android app that gathers health, legal rights, transport, and education information for disadvantaged individuals in one place, with English/Turkish support and accessibility modes. Java, Android Studio, Retrofit.
 
 ## Team
 
